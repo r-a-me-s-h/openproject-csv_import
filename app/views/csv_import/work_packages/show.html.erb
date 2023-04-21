@@ -1,0 +1,14 @@
+<%= styled_form_tag csv_import_work_packages_path, method: :post, multipart: true do %>
+  <fieldset class="form--fieldset">
+    <legend class="form--fieldset-legend">CSV Files</legend>
+
+    <div class="form--field">
+      <%= styled_label_tag  'work_package_file', I18n.t(:label_work_package_plural) %>
+      <div class="form--field-container">
+        <%= styled_file_field_tag "work_package_file" %>
+      </div>
+    </div>
+  </fieldset>
+
+  <%= styled_submit_tag 'Import' %>
+<% end %>
